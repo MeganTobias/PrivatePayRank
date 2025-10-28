@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #14B8A6;
+  --color-secondary: #10B981;
+  --color-accent: #06B6D4;
+  --color-background: #FFFFFF;
+  --color-surface: #F0FDFA;
+  --color-text: #134E4A;
+}
+
+.dark {
+  --color-primary: #2DD4BF;
+  --color-secondary: #34D399;
+  --color-accent: #22D3EE;
+  --color-background: #0F172A;
+  --color-surface: #1E293B;
+  --color-text: #F0FDFA;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text font-sans;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-slate-900/70 backdrop-blur-lg border border-teal-500/20;
+  }
+}
+
+
+
+
+
