@@ -20,6 +20,15 @@ const line =
   "\n===================================================================\n";
 
 if (!fs.existsSync(dir)) {
+  // Check if ABI files already exist (e.g., in Vercel deployment)
+  const abiFile = path.join(outdir, `${CONTRACT_NAME}ABI.ts`);
+  const addressesFile = path.join(outdir, `${CONTRACT_NAME}Addresses.ts`);
+  
+  if (fs.existsSync(abiFile) && fs.existsSync(addressesFile)) {
+    console.log(`✅ ABI files already exist, skipping generation`);
+    process.exit(0);
+  }
+  
   console.error(
     `${line}Unable to locate ${rel}. Expecting <root>/${dirname}${line}`
   );

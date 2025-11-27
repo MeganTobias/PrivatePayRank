@@ -34,7 +34,7 @@ yarn-error.log*
 next-env.d.ts
 
 # abi
-/abi
+# /abi - Allow ABI files for Vercel deployment
 
 
 

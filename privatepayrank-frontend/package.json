@@ -5,7 +5,7 @@
   "scripts": {
     "dev:mock": "node scripts/check-node.mjs && node scripts/genabi.mjs && next dev",
     "dev": "node scripts/genabi.mjs && next dev",
-    "build": "node scripts/genabi.mjs && next build",
+    "build": "node scripts/genabi.mjs || true && next build",
     "start": "next start",
     "lint": "next lint",
     "genabi": "node scripts/genabi.mjs"
